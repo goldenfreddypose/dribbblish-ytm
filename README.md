@@ -1,6 +1,8 @@
 # dribbblish-ytm
 <h2>Loose recreation of the spotify "dribbblish" theme for the Pear Desktop youtube music client</h2>
 
+The background colour is changeable with the background-hue property at the top
+
 **NOT ACTIVELY MAINTAINED** this was for fun
 
 Built off Keri's themes for ytmdesktop: https://github.com/kerichdev/themes-for-ytmdesktop-player/tree/main

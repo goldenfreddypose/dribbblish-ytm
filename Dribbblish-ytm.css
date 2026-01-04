@@ -1,0 +1,265 @@
+html:not(.style-scope)
+  { 
+
+@import url("https://raw.githubusercontent.com/kerichdev/themes-for-ytmdesktop-player/refs/heads/main/Dark%20Themes/Monocolored/Shady%20Green.css");
+         
+/* !! BUILT OFF KERI'S THEME check out his other stuff too https://github.com/kerichdev/themes-for-ytmdesktop-player */
+     
+/* as of jan 3 it uses a background image instead of native sidebar because of errors with the content resizing */
+
+/* this snippet sets the whole background but i thinkkkkkkkkk it works without it if you wanna get rid of it*/
+
+body {
+    overflow: visible !important;
+    background-image: url(https://i.postimg.cc/xd1WJMRr/bg.png) !important;
+    background-repeat: no-repeat !important;
+    background-blend-mode: multiply !important;
+    background-color: #1f1b41 !important;
+    background-position-y: -14px !important;
+    background-size: 100% 100% !important;
+    background-attachment: fixed !important;
+}
+
+/*===================CUSTOM VARIABLES==============================*/  
+
+
+      /* IMAGE BACKGROUND HUE */
+      --cust-ytmusic-background-hue: #303446;
+
+      /* PLAYER BAR COLOR */
+      --ytmusic-bar-color: rgba(0, 0, 0, .65);
+
+      /* MAIN COLOR */
+      --cust-ytmusic-play-nav-color: #00000000;
+
+      /* BACKGROUND COLOR */
+      --cust-ytmusic-dark-background: #00000000;
+
+      /* FOREGROUND COLOR */
+      --cust-ytmusic-dark-foreground: #00000000;
+
+      /* I NEED TRANSPARENCY */
+      --ytmusic-background: transparent !important;
+      --ytmusic-nav-bar: transparent !important;
+
+    --mandarinlight: #FFFFFF;
+    --mandarinlightmedium: #FFFFFF;
+    --mandarinmedium: #4e4e4e;
+
+    --cust-ytmusic-light-text-1: var(--mandarinlight) !important;
+    --cust-ytmusic-light-2: var(--mandarinlight) !important;
+    --cust-ytmusic-light-3: var(--mandarinlight) !important;
+    --cust-ytmusic-light-4: var(--mandarinlight) !important;
+    --cust-ytmusic-light-5: var(--mandarinlight) !important;
+
+    --cust-ytmusic-medium-1: var(--mandarinlightmedium) !important;
+    --cust-ytmusic-medium-2: var(--mandarinmedium) !important;
+    --cust-ytmusic-medium-3: var(--mandarinmedium) !important;
+    --cust-ytmusic-medium-4: var(--mandarinmedium) !important;
+    --cust-ytmusic-medium-5: var(--mandarinmedium) !important;
+}
+/* FLOATING PLAYER BAR */
+
+ytmusic-app-layout[player-visible]>[slot=player-bar], ytmusic-app-layout[player-visible] #player-bar-background.ytmusic-app-layout {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    position: absolute;
+    width: 50%;
+    bottom: 2%;
+    left: 25%;
+    background-color: var(--ytmusic-bar-color);
+    border-radius: 15px;
+    border: 1px solid white;
+}
+
+/* added the background in the wrong place cba replacing it so */
+#player-bar-background {
+    background: transparent !important;
+    border: 0 !important;
+}
+
+/* time info */
+.time-info.ytmusic-player-bar {
+ position: absolute;
+    left: 45%;
+    bottom: 105%;
+    background-color: var(--ytmusic-bar-color);
+    color: white;
+    padding: 1%;
+    border-radius: 7px;
+    border: 1px solid white;
+}
+
+/* idk why but the bar went red at some point */
+#progress-bar.ytmusic-player-bar {
+    --paper-slider-knob-color: #ffffff !important;
+    --paper-slider-knob-start-color: #ffffff !important;
+    --paper-slider-knob-start-border-color: #ffffff !important;
+    --paper-slider-active-color: #ffffff !important;
+}
+
+/* slider knob position fixer */
+#sliderKnobContainer {
+    margin-left: 12px !important;
+}
+
+/* fixed cover size
+#layout > ytmusic-player-bar > div.middle-controls.style-scope.ytmusic-player-bar > div.thumbnail-image-wrapper.style-scope.ytmusic-player-bar > img {
+    width: 45px;
+    border-radius: 0;
+    position: absolute;
+    left: 2%;
+} */
+
+/* play bar */
+#sliderBar.tp-yt-paper-slider {
+    width: 97% !important;
+    margin-left: 1.5%;
+}
+
+/* media controls */
+#left-controls {
+    grid-area: middle;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+.left-controls.ytmusic-player-bar {
+    visibility: visible !important;
+    margin-left: 110% !important;
+}
+#left-controls > div {
+    margin-right: 105px;
+}
+
+/* the like/dislike button and menu */
+.middle-controls {
+    margin-right: 10%;
+    grid-area: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* the volume the shuffle and repeat etc */
+#right-controls {
+    width: 0% !important;
+    margin-right: 5%;
+}
+
+/* sidebar border transparency */
+ytmusic-app-layout[is-bauhaus-sidenav-enabled] #mini-guide-background.ytmusic-app-layout {
+    border-bottom: 0px solid rgba(255, 255, 255, 0) !important;
+}
+ytmusic-app-layout[is-bauhaus-sidenav-enabled] #nav-bar-background.ytmusic-app-layout {
+    border-bottom: 0px solid rgba(255, 255, 255, 0) !important;
+    background-color: transparent;
+}
+#mini-guide-background {
+    visibility: hidden
+}
+#nav-bar-divider {
+    visibility: hidden
+}
+#guide-wrapper { 
+    border-right: 0px !important;
+    background-color: transparent; 
+}
+
+/* some buttons */
+.ytSpecIconShapeHost {
+    color: var(--mandarinlight);
+}
+
+/* sidebar */
+ytmusic-guide-renderer {
+    background-color: var(--cust-ytmusic-play-nav-color);
+}
+
+/* settings fixes */
+.category-menu-item.iron-selected.ytmusic-settings-page {
+    background-color: var(--mandarinmedium) !important;
+}
+
+/* i think this gets rid of gradients?? */
+.ytmusic-fullbleed-thumbnail-renderer {
+    visibility: hidden
+}
+
+/* makes the header fit right */
+#header { 
+    top: -9px
+}
+
+/* top bar icons excl. search bar */
+#right-content { 
+    top: 7%;
+    left: -22%;
+    width: 25%;
+}
+
+/* pear desktop back buttons */
+#right-content > div:nth-child(1) {
+    margin-right: -87%;
+    position: initial;
+    width: 29%;
+}
+
+/* search bar position */
+.center-content {
+    top: -27%;
+    height: 15%;
+}
+
+/* no compact toggle it would probably fuck everything up */
+#left-content {
+    visibility: hidden !important;
+}
+
+/* other search bar stuff like more contained so stuff doesnt break */
+#layout > ytmusic-nav-bar > div.center-content.style-scope.ytmusic-nav-bar > ytmusic-search-box > div {
+    perspective-origin: bottom right;
+    width: 225%;
+    position: relative;
+    margin-top: 0%;
+    margin-left: 7%;
+    height: 15%;
+}
+#layout > ytmusic-nav-bar {
+    margin-top: 1.5%;
+    position: fixed;
+}
+
+/* search bar transparency */
+#layout > ytmusic-nav-bar > div.center-content.style-scope.ytmusic-nav-bar > ytmusic-search-box > div > div.search-box.style-scope.ytmusic-search-box { 
+    background: rgb(255 255 255 / 0%); 
+}
+
+/* get rid of search shadow */
+#layout > ytmusic-nav-bar > div.center-content.style-scope.ytmusic-nav-bar > ytmusic-search-box > div { 
+    box-shadow: none 
+}
+
+/* make the search bar glow on hover */
+#layout > ytmusic-nav-bar > div.center-content.style-scope.ytmusic-nav-bar > ytmusic-search-box > div > div.search-box.style-scope.ytmusic-search-box:hover { background: rgb(255 255 255 / 20%); }
+
+/* get rid of chips */
+#chips {
+    visibility: hidden;
+    height: 0px;
+}
+
+/* more transparency assurance */
+body { background: transparent !important; }
+div.background-gradient.style-scope.ytmusic-browse-response { 
+    background: transparent !important;
+}
+
+/* VANILLA YOUTUBE MUSIC EDITS */
+
+#layout > ytmusic-player-bar {
+    position: fixed;
+}

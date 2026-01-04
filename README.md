@@ -1,5 +1,5 @@
 # dribbblish-ytm
-<h1>Loose recreation of the spotify "dribbblish" theme for the Pear Desktop youtube music client</h1>
+<h2>Loose recreation of the spotify "dribbblish" theme for the Pear Desktop youtube music client</h2>
 
 **NOT ACTIVELY MAINTAINED** this was for fun
 

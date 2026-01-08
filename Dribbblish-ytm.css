@@ -70,6 +70,7 @@ ytmusic-app-layout[player-visible]>[slot=player-bar], ytmusic-app-layout[player-
     background-color: var(--ytmusic-bar-color);
     border-radius: 15px;
     border: 1px solid white;
+    backdrop-filter: blur(3px);
 }
 
 /* added the background in the wrong place cba replacing it so */
@@ -256,6 +257,11 @@ ytmusic-guide-renderer {
 body { background: transparent !important; }
 div.background-gradient.style-scope.ytmusic-browse-response { 
     background: transparent !important;
+}
+
+/* hide volume slider because just use pc volume */
+#volume-slider {
+    visibility: hidden
 }
 
 /* VANILLA YOUTUBE MUSIC EDITS */
